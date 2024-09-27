@@ -23,5 +23,6 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/social-media-app.git
+   git clone https://github.com/yourusername/social-media-app.git![images](https://github.com/user-attachments/assets/25b0a028-50b7-420e-9a89-42234b63b5e0)
+
    cd social-media-app
