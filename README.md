@@ -2,6 +2,8 @@
 
 This is a Laravel 10 project that serves as a social media platform. It includes essential features for user interaction, including registration, login, messaging, and following functionality.
 
+![Screenshot (2)](https://github.com/user-attachments/assets/75e9ec98-da14-44f3-97a4-a05079bafe77)
+
 ## Features
 
 - **User Registration**: Users can sign up with their email and password.
@@ -11,8 +13,6 @@ This is a Laravel 10 project that serves as a social media platform. It includes
 - **User Search**: Search for users by name or email.
 
 ## Technologies Used
-![images (2)](https://github.com/user-attachments/assets/00d4c1e4-d6ce-4bbc-a091-0066f3093e22)
-
 
 - **Backend**: PHP 8.0+ with Laravel 10
 - **Database**: MySQL
