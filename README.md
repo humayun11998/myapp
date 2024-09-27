@@ -11,6 +11,8 @@ This is a Laravel 10 project that serves as a social media platform. It includes
 - **User Search**: Search for users by name or email.
 
 ## Technologies Used
+![images (2)](https://github.com/user-attachments/assets/00d4c1e4-d6ce-4bbc-a091-0066f3093e22)
+
 
 - **Backend**: PHP 8.0+ with Laravel 10
 - **Database**: MySQL
@@ -23,6 +25,6 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/social-media-app.git![images](https://github.com/user-attachments/assets/25b0a028-50b7-420e-9a89-42234b63b5e0)
+   git clone https://github.com/yourusername/social-media-app.git!
 
    cd social-media-app
