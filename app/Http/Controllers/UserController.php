@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use App\Models\Follow;
 use Illuminate\Http\Request;
@@ -9,8 +10,8 @@ use Intervention\Image\Image;
 use App\Event\OurExampleEvent;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
-
 
 class UserController extends Controller
 {
@@ -52,10 +53,29 @@ class UserController extends Controller
         if(auth()->check()){
             return view('homepage-feed', ['posts' => auth()->user()->feedPosts()->latest()->paginate(3)]);
         }else{
-            return view('homepage');
+            $postCount = Cache::remember('postCount', 20, function(){
+                sleep(5);
+                return Post::count();
+            });
+            return view('homepage', ['postCount' => $postCount]);
         }
     }
 
+
+    public function loginApi(Request $request){
+        $incomingFields = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        if (auth()->attempt($incomingFields)) {
+            $user = User::where('username', $incomingFields['username'])->first();
+            $token = $user->createToken('ourapptoken')->plainTextToken;
+            return $token;
+        }
+
+        return '';
+    }
 
     public function login(Request $request){
         $incomingFields = $request->validate([
